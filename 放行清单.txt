@@ -1,0 +1,56 @@
+# 放行清单 —— 想放行什么就写在这一个文件里
+#
+# 写法：
+#   域名                    api.example.com
+#   通配（展开常见子域）     *.example.com
+#   IP                      1.2.3.4
+#   进程（抓它的连接）       proc:Doubao
+#
+# 改完保存，双击「一键.bat」选 1 或 2 即可。
+
+# ==================== 国产 AI（网页版） ====================
+api.deepseek.com
+chat.deepseek.com
+www.deepseek.com
+platform.deepseek.com
+
+www.doubao.com
+doubao.com
+ark.cn-beijing.volces.com
+
+www.kimi.com
+kimi.com
+kimi.moonshot.cn
+api.moonshot.cn
+
+tongyi.aliyun.com
+dashscope.aliyuncs.com
+yiyan.baidu.com
+qianfan.baidubce.com
+chatglm.cn
+open.bigmodel.cn
+xinghuo.xfyun.cn
+spark-api-open.xf-yun.com
+hunyuan.tencent.com
+hailuoai.com
+api.minimax.chat
+stepfun.com
+api.stepfun.com
+www.baichuan-ai.com
+platform.lingyiwanwu.com
+
+# ==================== 中转站 / 自建网关 ====================
+# 自己的中转站写在这下面（把 example-relay 换成实际域名）
+api.openai-proxy.com
+openrouter.ai
+# *.my-relay.com
+
+# ==================== 桌面客户端（按进程） ====================
+proc:Doubao
+proc:Kimi
+proc:ChatGLM
+proc:Chatbox
+proc:NextChat
+proc:ChatGPT
+proc:Claude
+proc:Cursor
