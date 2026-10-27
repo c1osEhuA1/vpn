@@ -1,0 +1,38 @@
+# 桌面客户端 / 中转站客户端：按进程名抓它们实际连接的对端 IP
+#
+# 一行一个进程名（任务管理器 → 详细信息 → 名称，去掉 .exe）
+# 不在运行的会自动跳过，所以可以多写一些。
+#
+# 说明：客户端和中转站域名经常变、有的还是你自己部署的，
+#       所以「看进程连了哪些 IP」比「猜域名」稳得多。
+
+# ---------- 国产 AI 客户端 ----------
+Doubao
+DoubaoChat
+Kimi
+Moonshot
+ChatGLM
+Tongyi
+Quark
+Yiyan
+Xinghuo
+Hunyuan
+MiniMax
+Hailuo
+StepFun
+Baichuan
+
+# ---------- 通用 AI 客户端（也常接中转站） ----------
+Chatbox
+NextChat
+CherryStudio
+ChatGPT
+Claude
+Cursor
+LobeChat
+OpenWebUI
+
+# ---------- 浏览器：如果你在网页上用中转站 ----------
+# 一般不需要放行浏览器，因为浏览器本来就走 VPN 也照样能上；
+# 只有在「中转站必须直连」时才打开下面这行（会很激进，不推荐）
+# chrome

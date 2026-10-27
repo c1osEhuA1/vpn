@@ -49,6 +49,45 @@ chat.deepseek.com
 192.168.1.10
 ```
 
+
+### Presets / 预设
+
+presets/ 里放好了常用目标清单，直接指定名字即可：
+
+`powershell
+.\split-route.ps1 -Preset ai-all      # 全部国产 AI（DeepSeek / 豆包 / Kimi / 通义 / 文心 / 智谱 / 星火 / 混元 / MiniMax / 阶跃 / 百川 / 零一）
+.\split-route.ps1 -Preset deepseek    # 只放行 DeepSeek
+`
+
+或者双击 放行全部国产AI.bat（等于 -Preset ai-all）。
+
+想加自己的服务：在 presets/ 里新建一个 xxx.txt，一行一个域名，然后 -Preset xxx。
+
+
+### Coverage / 覆盖范围
+
+开箱覆盖 **网页 + 桌面客户端 + 中转站**：
+
+```powershell
+.\split-route.ps1 -Preset ai-all -Preset2 relay   # 或双击「全部放行.bat」
+```
+
+| 来源 | 怎么处理 |
+|---|---|
+| 网页版 AI（DeepSeek / 豆包 / Kimi / 通义 / 文心 / 智谱 / 星火 / 混元 / MiniMax / 阶跃 / 百川 / 零一） | `presets/ai-all.txt` 里的域名 |
+| 桌面客户端 | `processes.txt` 里的进程名 → 抓它当前连接的 IP（客户端域名经常变，按进程最稳） |
+| 中转站 / 自建网关（OneAPI、NewAPI、聚合客户端） | `presets/relay.txt` 里的域名 + 你自己的域名写进 targets.txt |
+
+### Wildcard / 通配
+
+```text
+*.your-domain.com
+```
+
+会自动展开成 `www.` / `api.` / `m.` / `chat.` / `app.` / `open.` / `platform.` / `console.` /
+`login.` / `passport.` / `cdn.` / `static.` / `gateway.` / `ws.` / `wss.` / `ark.` / `upload.` / `sso.`
+共 18 个常见子域，能覆盖大部分“前端 + 接口分开”的服务。
+
 ### Parameters / 参数
 
 ```powershell

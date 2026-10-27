@@ -1,0 +1,5 @@
+# 只放行 DeepSeek（最常用）
+api.deepseek.com
+chat.deepseek.com
+www.deepseek.com
+platform.deepseek.com
