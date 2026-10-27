@@ -1,0 +1,6 @@
+﻿# 一行一个：域名或 IP
+# '#' 开头是注释
+api.deepseek.com
+chat.deepseek.com
+www.deepseek.com
+platform.deepseek.com
